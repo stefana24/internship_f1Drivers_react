@@ -51,12 +51,18 @@ p.intro {
   border-bottom: 1px solid #949498;
 }
 
+.driver_points {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .number {
   font-size: 2.5rem;
 }
 
 .number_point {
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 .label {
@@ -74,6 +80,7 @@ p.intro {
   flex-wrap: wrap;
   padding: 5px;
   border-bottom: 1px solid #949498;
+  align-items: center;
 }
 
 .driver_name {
@@ -119,8 +126,8 @@ p.intro {
 }
 
 .card:hover {
-  border-top: 3px solid black;
-  border-right: 3px solid black;
+  border-top: 3px solid var(--custom-color);
+  border-right: 3px solid var(--custom-color);
   padding-top: 20px;
   transition: 0.1s all ease;
 }
@@ -135,4 +142,21 @@ p.intro {
 
   width: 70vw;
   margin: 0 auto;
+}
+
+.increaseScoreBtn {
+  height: 30px;
+  width: 30px;
+  align-self: center;
+  font-size: 20px;
+}
+
+.score {
+  display: flex;
+  flex-direction: row;
+}
+
+.countryImage {
+  width: 51px;
+  height: 36px;
 }
