@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 
-export const Card = ({ driver, index }) => {
+export const Card = ({ driver, index,increasePoints }) => {
   const color = `3px solid ${driver.hex}`;
-  const [count, setCount] = useState(driver.points);
+ 
   return (
-    <div class="card" style={{ "--custom-color": driver.hex }}>
+    <div className="card" style={{ "--custom-color": driver.hex }}>
       <div className="driver_number_points">
-        <h3 class="number">{index + 1}</h3>
+        <h3 className="number">{index + 1}</h3>
         <div className="driver_points">
-          <p className="number_point">{count}</p>
+          <p className="number_point">{driver.points}</p>
           <div className="score">
             <p className="label">PTS</p>
             <button
               className="increaseScoreBtn"
               style={{ backgroundColor: driver.hex }}
-              onClick={() => setCount(count + 1)}
+              onClick={() => increasePoints(index)}
             >
               +
             </button>
@@ -35,7 +35,7 @@ export const Card = ({ driver, index }) => {
       </div>
 
       <div className="driver_team">{driver.team}</div>
-      <div class="driver_image">
+      <div className="driver_image">
         <button className="driver_number">{driver.number}</button>
         <img src={driver.image} alt={driver.lastName} className="driver_img" />
       </div>
